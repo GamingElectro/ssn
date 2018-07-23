@@ -67,6 +67,8 @@ bot.on("message", async message => {
   .setAuthor(message.author.username)
   .setColor("#0000FF")
   .addField("💸", `${coinAmt} coins added!`);
+    
+    message.channel.send(coinEmbed);
 
   }
 
@@ -91,6 +93,8 @@ bot.on("message", async message => {
     .setTitle("Level Up!")
     .setColor(purple)
     .addField("New Level", curlvl + 1);
+    
+    message.channel.send(lvlup);
 
   }
   fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
